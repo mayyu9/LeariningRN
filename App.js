@@ -30,13 +30,14 @@ import SearchBarList from './src/SearchBarListExample/SearchBarListExample';
 import AddRemoveEmptyFlatList from './src/AddRemoveEmptyFlatList/AddRemoveEmptyFlatListExample';
 import PinchToZoomImage from './src/PinchToZoomImage/PinchToZoomImage';
 import ImageIconInsideButton from './src/ImageIconInsideButton/ImageIconInsideButton';
+import StarRattingExample from './src/StarRatingExample/StarRatingExample';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{flex: 1}}>
-        <ImageIconInsideButton />
+        <StarRattingExample />
         {/* <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
