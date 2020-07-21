@@ -1,18 +1,12 @@
 /* eslint-disable prettier/prettier */
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import {
     Text,
     StyleSheet,
     View,
-    FlatList,
-    TextInput,
-    ActivityIndicator,
-    ScrollView,
     TouchableOpacity,
     Image,
     Alert,
-    UIManager,
-    LayoutAnimation,
   } from 'react-native';
 
   import StarRating from 'react-native-star-rating';
@@ -27,6 +21,10 @@ state for the stars and write review component
 */
   const RattingComponent = ({item}) => {
     const [starCount, setStarCount] = useState(0);
+    const writeReview = () => {
+        Alert.alert(`write review: ${item.key}`);
+    };
+
     return (
       <View style={{margin: 10}}>
           <View style={{flexDirection: 'row'}}>
@@ -55,7 +53,9 @@ state for the stars and write review component
                       starSize={30}
                       selectedStar={(rating) => setStarCount(rating)}
                   />
-                  <TouchableOpacity style={{
+                  <TouchableOpacity
+                  onPress={writeReview}
+                  style={{
                       marginRight: 10,
                       marginTop: 10,
                       borderWidth: 1,
