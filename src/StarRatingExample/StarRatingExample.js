@@ -53,7 +53,7 @@ import {
       },
 ];
   const StarRattingExample = props => {
-      const [starCount, setStarCount]= useState(2.5);
+      const [starCount, setStarCount]= useState(0);
       const renderReview = ({item}) => {
         return(
             <View style={{margin: 10}}>
@@ -79,7 +79,9 @@ import {
                             disabled={false}
                             maxStars={5}
                             rating={starCount}
-                            // selectedStar={(rating) => this.onStarRatingPress(rating)}
+                            fullStarColor={'yellow'}
+                            starSize={30}
+                            selectedStar={(rating) => setStarCount(rating)}
                         />
                         <TouchableOpacity style={{
                             marginRight: 10,
