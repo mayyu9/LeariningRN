@@ -30,7 +30,8 @@ import SearchBarList from './src/SearchBarListExample/SearchBarListExample';
 import AddRemoveEmptyFlatList from './src/AddRemoveEmptyFlatList/AddRemoveEmptyFlatListExample';
 import PinchToZoomImage from './src/PinchToZoomImage/PinchToZoomImage';
 import ImageIconInsideButton from './src/ImageIconInsideButton/ImageIconInsideButton';
-import StarRattingExample from './src/StarRatingExample/StarRatingExample';
+// import StarRattingExample from './src/StarRatingExample/StarRatingExample';
+import StarRattingExample from './src/ClinincReview/StarRatingExample';
 
 const App = () => {
   return (
