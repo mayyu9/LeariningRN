@@ -12,9 +12,9 @@ import {
   import StarRating from 'react-native-star-rating';
   // import StarRattingExample from './StarRatingExample';
 
-  const imageUrl = {
-      uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/logosmalltransparen.png',
-  };
+//   const imageUrl = {
+//       uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/logosmalltransparen.png',
+//   };
 /*
 this component will render for item of the json, hence each and every item will have its own 
 state for the stars and write review component
