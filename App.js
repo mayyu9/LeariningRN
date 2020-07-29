@@ -32,13 +32,14 @@ import PinchToZoomImage from './src/PinchToZoomImage/PinchToZoomImage';
 import ImageIconInsideButton from './src/ImageIconInsideButton/ImageIconInsideButton';
 // import StarRattingExample from './src/StarRatingExample/StarRatingExample';
 import StarRattingExample from './src/ClinincReview/StarRatingExample';
+import LoginForm from './src/LoginFormExample/LoginFormExample';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{flex: 1}}>
-        <StarRattingExample />
+        <LoginForm />
         {/* <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
