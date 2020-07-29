@@ -36,6 +36,10 @@ const LoginForm = props => {
         setPassword(text);
         setPasswordError(undefined);
     };
+
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
     return(
         <View style={styles.container}>
             <View>
@@ -65,7 +69,7 @@ const LoginForm = props => {
                 selectionColor={'#fff'}
                 onChangeText={text => onChangePassword(text)}
                 />
-               <TouchableOpacity>
+               <TouchableOpacity onPress={toggleShowPassword}>
               <FontAwesomeIcon
                 icon={showPassword ? faEyeSlash : faEye}
                 style={styles.field}
