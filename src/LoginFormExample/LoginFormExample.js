@@ -14,7 +14,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
   faUserAlt,
   faEye,
-  faPaw,
   faEyeSlash,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -40,6 +39,26 @@ const LoginForm = props => {
     const toggleShowPassword = () => {
         setShowPassword(!showPassword);
     };
+    const removeErrors = () => {
+        setUserNameError(undefined);
+        setPasswordError(undefined);
+    };
+    const validiteState = () => {
+        if (userName != null && userName.trim().length === 0){
+            setUserNameError('Please enter usern name');
+        }
+        if (password != null && password.trim().length === 0) {
+            setPasswordError('Please enter password');
+        }
+    };
+
+    const onPressLogin = () => {
+        removeErrors();
+        if (validiteState() && userName && password) {
+            Alert.alert('sigin in');
+        }
+    };
+
     return(
         <View style={styles.container}>
             <View>
@@ -80,6 +99,11 @@ const LoginForm = props => {
             <Text style={styles.errorMessage}>{passwordError}</Text>
           ) : null}
         </View>
+        <TouchableOpacity onPress={onPressLogin}>
+          <View style={styles.loginButton}>
+            <Text style={styles.loginButtonTextStyle}>SIGN IN</Text>
+          </View>
+        </TouchableOpacity>
         </View>
     );
 };
@@ -95,6 +119,26 @@ const styles = StyleSheet.create({
       },
       fieldWrapper:{borderWidth: 1,justifyContent: 'space-between', flexDirection: 'row', borderBottomColor: 'black',
        margin: 10},
+       loginButton: {
+        borderRadius: 8,
+        marginTop: 20,
+        padding: 10,
+        color: '#000000',
+        backgroundColor: 'lightgrey',
+        textAlign: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        maxWidth: 150,
+      },
+      loginButtonTextStyle: {
+        color: '#000000',
+        paddingLeft: 10,
+        // fontFamily: FONT_FAMILY.FONT_LIGHT,
+      },
+      errorMessage: {
+          color: 'red',
+          marginLeft: 10,
+      },
 });
 
 export default LoginForm;
