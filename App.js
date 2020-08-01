@@ -33,13 +33,14 @@ import ImageIconInsideButton from './src/ImageIconInsideButton/ImageIconInsideBu
 // import StarRattingExample from './src/StarRatingExample/StarRatingExample';
 import StarRattingExample from './src/ClinincReview/StarRatingExample';
 import LoginForm from './src/LoginFormExample/LoginFormExample';
+import SubscriptExample from './src/SubsrciptExample/SubscriptExample';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{flex: 1}}>
-        <LoginForm />
+        <SubscriptExample />
         {/* <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
